@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Stories </title>
+    <link rel="stylesheet" href="ajax.css">
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="ajax.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Stories CRUD</h1>
+        <form id="story-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="content" placeholder="Content" required></textarea>
+            <button type="submit">Add Story</button>
+        </form>
+        <div id="stories"></div>
+    </div>
+</body>
+</html>
