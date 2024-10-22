@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Left column */
+        .left-column {
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid #007BFF; /* Optional: Add border */
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        /* Section heading for blue text */
+        .blue-text {
+            color: #007BFF;
+        }
+        /* Right column */
+        .right-column {
+            width: 65%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #333;
+            margin: 20px 0;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        /* Introduction hover */
+        .introduction {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .profile img:hover + .introduction {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="Profile">
+                <img src="" alt="Profile Picture">
+            </div>
+            <h2 class="blue-text">Profile</h2>
+            <p>"Dedicated and ambitious student pursuing a degree in Software Engineering, with strong academic performance and hands-on experience in Python, Java, and JavaScript."</p>
+
+            <h2 class="blue-text">Contact</h2>
+            <p><strong>Phone:</strong> 678-555-0103</p>
+            <p><strong>Website:</strong> www.example.com</p>
+            <p><strong>Email:</strong> ayeshatahir@gmail.com</p>
+
+            <h2 class="blue-text">Hobbies</h2>
+            <p>Learning a new programming language, Photography, Volunteering</p>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <h1>Ayesha Tahir</h1>
+            <hr>
+
+            <h2>Education</h2>
+            <p><strong>Superior Allama Iqbal College</strong><br>2019-2021<br>FSC-pre Medical</p>
+            <p><strong>Comsats University Islamabad, Lahore Campus</strong><br>2023 - present<br>Software Engineering</p>
+            <hr>
+
+            <h2>Work Experience</h2>
+            <p><strong>System Limited - Intern</strong><br>20-05-2024 to 30-07-2024</p>
+            <p>Implemented CI/CD pipelines, automated testing, and deployment using Jenkins, GitLab CI, or CircleCI, ensuring seamless integration and faster delivery. Gained experience in frameworks like React, Django, or Spring Boot.</p>
+            <hr>
+
+            <h2>Skills</h2>
+            <div class="skills">
+                <ul>
+                    <li>C</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction on Hover -->
+    <div class="introduction">
+        <h2>Ayesha Tahir</h2>
+        <p>"Dedicated and ambitious student pursuing a degree in Software Engineering, with strong academic performance and hands-on experience in Python, Java, and JavaScript. Passionate about Software Development and looking for opportunities to grow professionally."</p>
+    </div>
+
+    <script>
+        const profileImage = document.querySelector('.profile img');
+        const introduction = document.querySelector('.introduction');
+
+        profileImage.addEventListener('mouseover', () => {
+            introduction.style.display = 'block';
+        });
+
+        profileImage.addEventListener('mouseout', () => {
+            introduction.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
