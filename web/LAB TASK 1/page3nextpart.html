@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Page 3 next part</title>
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            overflow:hidden; 
+        }
+        .image-container:hover .img-fluid{
+            transform: scale(1.1);
+            transform:transition 0.3s ease-in-out;
+        }
+        .img-fluid{
+            transform:transition 0.3s ease-in-out;
+        
+        }
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index:2;
+        }
+        .description {
+            margin-top: 10px; /* Space between image and description */
+            text-align: center; /* Center text */
+            z-index:2;
+            position:relative;
+        }
+        .text-center{
+            font-style: italic;
+            font-weight: bold;
+        }
+        .image-container:hover .tag,
+        .image-container:hover .description {
+            z-index:3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">FESTIVE COLLECTION</h1>
+        
+        <!-- Loop through rows of images -->
+        <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4683-blue-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 1">
+                <div class="tag">Fancy</div>
+                <div class="description">CH4683 POLYESTER Net Blue <br>
+                New in <br>
+                PKR 38,805</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4683-black-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 2">
+                <div class="tag">Fancy</div>
+                <div class="description">CH4683 POLYESTER Net Black  <br>
+                  New in <br>
+                  PKR 38,805</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4556-spink-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 3">
+                <div class="tag">Fancy</div>
+                <div class="description">CH4556 ORGANZA S-Pink <br>
+                  New in <br>
+                  PKR 36,500</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4556-owhite-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 4">
+                <div class="tag">Fancy</div>
+                <div class="description">CH4556 ORGANZA O-white<br>
+                    New in <br>
+                    PKR 36,500
+                    </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 2 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1203_l-green_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 5">
+                <div class="tag">Formals</div>
+                <div class="description">SWEET PEA<br>
+                  New in <br>
+                  PKR 29,875</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4521_d.green_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 6">
+                <div class="tag">Formals</div>
+                <div class="description">MYSTIC GOLD <br>
+                  New in <br>
+                  PKR 24,250 </div>
+    
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2534_purple_3_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 7">
+                <div class="tag">Formals</div>
+                <div class="description"> FLORAL & FAUNA<br>
+                  New in <br>
+                  PKR 35,975
+                </div>
+            
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2519_purple_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 8">
+                <div class="tag">Formals</div>
+                <div class="description">FLORAL KHANI <br>
+                  New in <br>
+                  PKR 20,950</div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 3 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2535_rust_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 9">
+                <div class="tag">Formals</div>
+                <div class="description">FLORAL & FAUNA <br>
+                  New in <br>
+                  PKR 37,425</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2456_blue_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 10">
+                <div class="tag">Formals</div>
+                <div class="description">DECORATIVE FLOWERS-001 <br>
+                 New in  <br>
+                 PKR 22,525</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2484_beige_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 11">
+                <div class="tag">Formals</div>
+                <div class="description">CUT WORK <br>
+                New in <br>
+                PKR 34,650</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2271_beige_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 12">
+                <div class="tag">Formals</div>
+                <div class="description">BEAUTY OF GARDEN<br>
+                  New in <br>
+                  PKR 27,025</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Row 4 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2461_beige_1_.jpg%3Fwidth%3D640"class="img-fluid" alt="Image 13">
+                <div class="tag">Formals</div>
+                <div class="description">MUGHAL-03 <br>
+                  Festive Collection <br>
+                  PKR 32,815</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2397_pink_3_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 14">
+                <div class="tag">Formals</div>
+                <div class="description">GULALAC <br>
+                  Festive Collection <br>
+                  PKR 31,230</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2429_peach_4__1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 15">
+                <div class="tag">Formals</div>
+                <div class="description">LOTUS RANGE <br>
+                   Festive Collection<br>
+                   PKR 33,925</div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2422sh-green--3_9o1lideoo6kgncso.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 16">
+                <div class="tag">Formals</div>
+                <div class="description">THE ART OF JAMDANI <br>
+                   Festive Collection <br>
+                   PKR 44,875</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
