@@ -1,0 +1,607 @@
+header {
+    position: fixed;
+    /* Keep the header fixed to the top */
+    height: 150px;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+
+}
+
+body {
+    margin-top: 150px;
+    /* Add margin to make room for the fixed header */
+}
+
+#navbar {
+    height: 50px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+}
+
+#logo i {
+    padding: 10px;
+}
+
+#nav-con {
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    padding-right: 50px;
+    font-family: 'HelveticaNeueCyr';
+}
+
+/* Initially hide the search box */
+#searchBox {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    /* Adjust this based on your layout */
+    right: 20px;
+    /* Adjust this based on your layout */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the input field inside the search box */
+#searchBox input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the search button */
+#searchBtn {
+    color: black;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#searchBtn:hover {}
+
+/* When the search button is hovered, show the search box */
+.search-bar:hover #searchBox {
+    display: block;
+}
+
+/* Stay visible when the user clicks or focuses on the search box */
+.search-bar:focus-within #searchBox {
+    display: block;
+}
+
+/* Hide the search box when not in use */
+.hidden {
+    display: none;
+}
+
+.product-name {
+    text-align: center;
+    /* Centers the name below the image */
+    margin-top: 5px;
+    /* Adds some space between the image and the name */
+    font-weight: bold;
+    font-size: 14px;
+    /* Adjust the font size as needed */
+}
+
+.main ul li {
+    display: flex;
+    flex-direction: column;
+    /* Aligns the image and text vertically */
+    align-items: center;
+    /* Centers content horizontally */
+    text-align: center;
+    margin: 20px;
+    /* Adjust spacing between items */
+}
+
+.main ul img {
+    margin-bottom: 5px;
+    /* Space between the image and text */
+}
+
+
+
+
+#nav-con a {
+
+    text-decoration: none;
+    color: black;
+    padding-right: 15px;
+
+}
+
+.addition {
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    float: right;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.addition a {
+    text-decoration: none;
+    color: black;
+}
+
+#filter:hover {
+    border-bottom: 2px solid black;
+}
+
+
+
+#pic1 {
+    margin-top: -150px;
+    width: 100%;
+    height: 650px;
+}
+
+.img1 {
+    width: 100%;
+    height: 650px;
+}
+
+.img-logo {
+    /* color: aqua; */
+    height: 20px;
+}
+
+.img-content h1 {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-bottom: -9px;
+    font-family: 'HelveticaNeueCyr';
+}
+
+.img-content p {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+
+.pic {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    /* background-color: brown; */
+    position: relative;
+    padding-bottom: 20px;
+    font-family: 'HelveticaNeueCyr';
+}
+
+.pic img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.pic-content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    /* background-color: yellow; */
+    width: 68%;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-left: auto;
+    margin-top: -31px;
+    margin-right: auto;
+    padding: 15px;
+}
+
+
+.pic-content2 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    width: 91%;
+}
+
+.pic-content3 {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-top: -65px;
+    margin-left: 550px;
+}
+
+.pic15 {
+    width: 55%;
+}
+
+.pic10 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    padding-right: 60px;
+    height: 620px;
+}
+
+.pic10 img {
+    height: 550px;
+    margin-top: -70px;
+}
+
+.mainn {
+    background-color: #EDE7E7;
+}
+
+.item-title,
+.item-price {
+    /* font-family: 'Arial', sans-serif; */
+    font-family: 'HelveticaNeueCyr';
+    font-weight: lighter;
+    color: hsl(0, 0%, 4%);
+    margin: 0;
+    font-size: 15px;
+}
+
+
+.item-title {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+
+.item-price {
+    font-size: 15px;
+    text-align: right;
+}
+
+.above-footer-section {
+    /* background-color: aqua; */
+    height: 100px;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inn {
+    background-color: #f2eaea;
+    margin-right: 50px;
+    width: 300px;
+    text-align: center;
+    height: 40px;
+
+}
+
+.above-footer-section .inn p {
+    margin-left: 30px;
+    font-family: 'HelveticaNeueCyr';
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+    font-family: 'HelveticaNeueCyr';
+    position: relative;
+}
+
+.footer-container {
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column img {
+    width: 100px;
+    height: 120px;
+    margin: 10px 0;
+    padding-right: 30px;
+}
+
+.logo-symbol {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.newsletter a,
+.social a,
+p,
+.apps a {
+    text-decoration: none !important;
+    color: #000;
+    line-height: 1.00;
+    font-weight: lighter;
+    font-family: 'HelveticaNeueCyr';
+    letter-spacing: 0.8px;
+    font-size: 12px;
+    padding-right: 30px;
+}
+
+.footer-column h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: 'HelveticaNeueCyr';
+    letter-spacing: .8px;
+    padding-top: 15px;
+    padding-right: 30px;
+
+}
+
+h4 {
+    font-weight: lighter;
+}
+
+.footer-container-2 {
+    /* background-color: blanchedalmond; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 120px;
+}
+
+.footer-container-2 .apps h4 {
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+.apps {
+    flex: 1;
+    min-width: 300px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'HelveticaNeueCyr';
+    padding-left: 140px;
+    /* background-color: yellowgreen; */
+}
+
+.social {
+    /* min-width: 300px; */
+    text-align: center;
+    font-size: 11px;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    /* background-color: aqua; */
+    padding-left: 160px;
+    margin-right: 10px;
+    padding-top: 10px;
+    margin-top: -50px;
+    max-width: 100%;
+
+}
+
+.contact {
+    /* background-color: rgb(223, 238, 18); */
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    margin-left: 150px;
+    font-size: 11px;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    padding-right: 80px;
+    max-width: 100%;
+}
+
+.contact h4 {
+    margin-left: -30px;
+}
+
+.footer-column {
+
+    /* margin-top: -10px; */
+    font-size: 11px;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+}
+
+
+.social a {
+    /* margin: 0 10px;  */
+    font-size: 11px;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+}
+
+.fa-mobile,
+.fa-regular {
+    font-size: 18px;
+}
+
+.fa-mobile:hover,
+.fa-regular:hover {
+    cursor: pointer;
+}
+
+.apps {
+    margin-top: -70px;
+}
+
+.copyright p {
+    font-size: 11.6px;
+    font-family: 'HelveticaNeueCyr';
+    padding-left: 60px;
+    padding-top: 80px;
+}
+
+.two_pics {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 700px;
+    overflow: hidden;
+}
+
+.two_pics .first,
+.two_pics .second {
+    position: relative;
+}
+
+.two_pics .first {
+    flex: 2;
+    height: 97%;
+}
+
+.two_pics .second {
+    flex: 1;
+    height: 92%;
+}
+
+.two_pics img {
+    width: 100%;
+    /* Ensure images take full width of their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure images are resized properly */
+}
+
+.two_pics .pic-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.two_pics .item-title {
+    font-family: 'Arial', sans-serif;
+    color: hsl(0, 0%, 4%);
+    margin: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.two_pics .item-price {
+    font-family: 'Arial', sans-serif;
+    color: hsl(0, 0%, 4%);
+    margin: 23px;
+    font-size: 15px;
+    text-align: right;
+}
+
+.last_pic {
+    /* background-color: green; */
+    display: block;
+    max-width: 30%;
+    max-height: 50%;
+}
+
+.pic-content-last {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    /* background-color: yellow; */
+    width: 68%;
+    /* margin: 0 auto; */
+    padding: 10px 0;
+    margin-left: 525px;
+    margin-top: -31px;
+    margin-right: auto;
+    padding: 15px;
+}
+
+
+.pic {
+    position: relative;
+    /* Ensure it's positioned properly without overlap */
+    z-index: 1;
+    /* Set a lower z-index than the header */
+}
+
+.pic img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    /* background-color: brown;  */
+
+}
+
+.container img {
+    height: 550px;
+    padding: 10px;
+    margin-top: -25px;
+
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    /* Adjust the width of the inner container */
+    background-color: black;
+    /* Optional: background color */
+    color: white;
+    height: auto;
+    /* Adjust based on content */
+    padding: 20px;
+    /* Optional: padding inside the inner container */
+}
+
+.inner>div {
+    flex: 1;
+    margin: 10px;
+    /* Optional: add space between the images */
+}
+
+.inner img {
+    width: 80%;
+    /* Ensure the images take up full width of their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+}
+
+.price {
+    background-color: beige;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* Optional: Add padding around the price section */
+    font-size: 14px;
+    margin-top: 10px;
+    /* Add some space between the image and the price */
+}
+
+.quality {
+    font-weight: bold;
+    font-size: 12px;
+    /* Adjust the font size */
+}
+
+.pkr {
+    margin-right: 15px;
+    font-size: 14px;
+    /* Adjust font size for price */
+    font-weight: bold;
+}

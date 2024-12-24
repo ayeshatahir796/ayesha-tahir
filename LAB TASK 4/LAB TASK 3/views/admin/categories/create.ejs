@@ -1,0 +1,19 @@
+<head>
+    <title>Create Category</title>
+    <link rel="stylesheet" href="/css/category/add-category-form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Create Category</h1>
+        <form action="/categories/create" method="POST">
+            <div class="form-group">
+                <label for="name">Category Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Add Category</button>
+                <button type="button" class="btn btn-danger" onclick="history.back()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>

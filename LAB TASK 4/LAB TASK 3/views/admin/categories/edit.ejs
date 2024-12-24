@@ -1,0 +1,19 @@
+<head>
+    <title>Edit Category</title>
+    <link rel="stylesheet" href="/css/category/edit-category.css">
+  </head>
+  
+  <body>
+    <div class="form-container">
+        <a onclick="history.back()" class="cancel-cross">×</a>
+        <h5>Edit Category</h5>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="name">Category Name:</label>
+                <input type="text" name="name" id="name" value="<%= category.name %>" required>
+            </div>
+            <button type="submit">Update Category</button>
+        </form>
+    </div>
+  </body>
+  

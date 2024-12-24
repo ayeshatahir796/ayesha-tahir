@@ -1,0 +1,66 @@
+<header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .dashboard-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            text-decoration: none;
+            /* Removes underline from anchor */
+            color: inherit;
+            /* Ensures text color is inherited */
+            transition: transform 0.2s, box-shadow 0.2s;
+            /* Adds hover effect */
+        }
+
+        .box i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .box p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            /* Slight zoom-in effect on hover */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            /* Deeper shadow on hover */
+        }
+    </style>
+</header>
+<h1>welcome to dashboard</h1>
+<div class="dashboard-boxes">
+    <a href="/home" class="box">
+        <i class="fas fa-home"></i>
+        <p>Home</p>
+    </a>
+    <a href="/products" class="box">
+        <i class="fas fa-box"></i>
+        <p>Product</p>
+    </a>
+    <a href="/categories" class="box">
+        <i class="fas fa-tags"></i>
+        <p>Category</p>
+    </a>
+</div>

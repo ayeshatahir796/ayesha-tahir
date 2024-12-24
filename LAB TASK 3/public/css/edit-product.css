@@ -1,0 +1,93 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  h5 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  /* Form container styles */
+  .form-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  /* Cancel button */
+  .cancel-cross {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .cancel-cross:hover {
+    color: #ff5555;
+  }
+  
+  /* Form group styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Button styles */
+  button {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

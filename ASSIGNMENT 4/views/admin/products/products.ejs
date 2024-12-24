@@ -1,0 +1,143 @@
+<head>
+    <title>Product List</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/list.css">
+  </head>
+  
+  <body>
+    <h1 style="color: #004080; text-align: center; margin-top: 20px;">Product List</h1>
+  
+    <div style="text-align: center; margin-bottom: 20px;">
+      <a href="/products/create" class="btn btn-primary">Add New Product</a>
+    </div>
+  
+    <!-- Search Bar -->
+    <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+      <form action="/products" method="get" style="display: flex; align-items: center;">
+        <!-- Input Field -->
+        <input
+          type="text"
+          name="search"
+          placeholder="Search by description, name or price..."
+          value="<%= searchQuery %>"
+          style="
+            padding: 12px 18px;
+            width: 300px;
+            border: 2px solid #007bff;
+            border-radius: 50px 0 0 50px;
+            font-size: 16px;
+            outline: none;
+            background-color: #f0f8ff;
+            box-shadow: 0 4px 6px rgba(0, 0, 255, 0.1);
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+          "
+          onfocus="this.style.borderColor='#0056b3'; this.style.boxShadow='0 4px 8px rgba(0, 85, 179, 0.3)';"
+          onblur="this.style.borderColor='#007bff'; this.style.boxShadow='0 4px 6px rgba(0, 0, 255, 0.1)';"
+        />
+  
+        <!-- Search Button -->
+        <button
+          type="submit"
+          style="
+            padding: 12px 20px;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: #fff;
+            transition: all 0.3s ease;
+          "
+          onmouseover="this.style.background='linear-gradient(to right, #0056b3, #004080)';"
+          onmouseout="this.style.background='linear-gradient(to right, #007bff, #0056b3)';"
+        >
+          <i class="fas fa-search"></i> Search
+        </button>
+      </form>
+    </div>
+  
+    <!-- Table -->
+    <div class="table-container">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Picture</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (products.length > 0) { %>
+            <% products.forEach(product => { %>
+              <tr>
+                <td><%= product.name %></td>
+                <td>$<%= product.price.toFixed(2) %></td>
+                <td><%= product.description || 'No description available' %></td>
+                <td>
+                  <% if (product.picture) { %>
+                    <img src="<%= product.picture %>" alt="<%= product.name %>" style="width: 80px; height: auto; border: 2px solid #007bff; border-radius: 5px;">
+                  <% } else { %>
+                    <span style="color: #999;">No picture available</span>
+                  <% } %>
+                </td>
+                <td>
+                  <a href="/products/edit/<%= product._id %>" class="btn btn-warning btn-sm">Edit</a>
+                  <a href="/products/delete/<%= product._id %>" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+              </tr>
+            <% }); %>
+          <% } else { %>
+            <tr>
+              <td colspan="5" class="text-center" style="color: #888;">No products found</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Pagination -->
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+            <!-- Previous Page -->
+            <% if (pagination.hasPrevPage) { %>
+              <li class="page-item">
+                <a class="page-link" href="?page=<%= pagination.currentPage - 1 %>" style="color: #007bff;">&laquo;</a>
+              </li>
+            <% } else { %>
+              <li class="page-item disabled">
+                <span class="page-link">&laquo;</span>
+              </li>
+            <% } %>
+  
+            <!-- Page Numbers -->
+            <% for (let i = 1; i <= pagination.totalPages; i++) { %>
+              <li class="page-item <%= i === pagination.currentPage ? 'active' : '' %>">
+                <a class="page-link" href="?page=<%= i %>" style="color: <%= i === pagination.currentPage ? '#fff' : '#007bff' %>; background-color: <%= i === pagination.currentPage ? '#007bff' : 'transparent' %>;">
+                  <%= i %>
+                </a>
+              </li>
+            <% } %>
+  
+            <!-- Next Page -->
+            <% if (pagination.hasNextPage) { %>
+              <li class="page-item">
+                <a class="page-link" href="?page=<%= pagination.currentPage + 1 %>" style="color: #007bff;">&raquo;</a>
+              </li>
+            <% } else { %>
+              <li class="page-item disabled">
+                <span class="page-link">&raquo;</span>
+              </li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+  

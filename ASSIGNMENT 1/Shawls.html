@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Page 1 next part</title>
+    <style>
+        html, body {
+        overflow-x: hidden;
+       }
+       body {
+        margin: 0;
+     }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            overflow:hidden; 
+        }
+        .image-container:hover .img-fluid{
+            transform: scale(1.1);
+            transform: transition 0.3s ease-in-out;
+        }
+        .img-fluid{
+            transform:transition 0.3s ease-in-out;
+        }
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index:2;
+        }
+        .description {
+            margin-top: 10px; /* Space between image and description */
+            text-align: center; /* Center text */
+            z-index:2;
+            position:relative;
+        }
+        .text-center{
+            font-style: italic;
+            font-weight: bold;
+        }
+        .image-container:hover .tag,
+        .image-container:hover .description {
+            z-index:3;
+        }
+        .btn {
+            font-size: 14px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: black;
+            color:white;
+        }
+        .cart-container {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">SHAWLS</h1>
+        
+        <!-- Loop through rows of images -->
+        <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/-new2mc1242-t.blue--2_ltwd4bbwedjod1wj.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 1">
+                <div class="tag">Shawls</div>
+                <div class="description">VICTORIA HERITAGE<br>
+                 Shawls<br>
+                PKR 18,500</div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('VICTORIA HERITAGE', 18,500)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/wr380_beige_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 2">
+                <div class="tag">Shawls</div>
+                <div class="description">Summer Shawls-24-X02 <br>
+                  Shawls<br>
+                  PKR 3,527</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Summer Shawls-24-X02', 3,527)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc986-maroon_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 3">
+                <div class="tag">Shawls</div>
+                <div class="description">JHARNA RANGE <br>
+                  Shawls<br>
+                  PKR 36,000</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('JHARNA RANGE', 36,000)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2448-purple--2_lfieazx3cjtviss0.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 4">
+                <div class="tag">Shawls</div>
+                <div class="description">MUGHAL CLASSIC SHAWL<br>
+                    Shawls<br>
+                    PKR 21,800
+                    </div>
+                    <div class="text-center mt-2">
+                        <button class="btn btn-primary" onclick="addToBag('MUGHAL CLASSIC SHAWL', 21,800)">Add to Bag</button>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 2 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4462-n.blue--_3_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 5">
+                <div class="tag">Shawls</div>
+                <div class="description">FLORAL ROYALTY SHAWL<br>
+                  Shawls<br>
+                  PKR 37,000</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('FLORAL ROYALTY SHAWL', 37,000)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/-new2bnl2510-brown--1_yt9mjjsq4ael6iux.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 6">
+                <div class="tag">Shawls</div>
+                <div class="description">ANCHAL 01 <br>
+                  Shawls<br>
+                  PKR 14,500</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('ANCHAL 01 ', 14,500)">Add to Bag</button>
+                </div>
+            </div>
+    
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4518-mahoon--2_qri46zpywkxhritg.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 7">
+                <div class="tag">Shawls</div>
+                <div class="description">ROYAL ELEGENCE<br>
+                  Shawls <br>
+                  PKR 57,250 
+                </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('ROYAL ELEGENCE', 57,250)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1098_beige_3_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 8">
+                <div class="tag">Shawls</div>
+                <div class="description">RHYTHM RANGE-SHAWL<br>
+                  Shawls <br>
+                  PKR 23,500</div>
+            
+            <div class="text-center mt-2">
+                <button class="btn btn-primary" onclick="addToBag('RHYTHM RANGE-SHAWL', 23,500)">Add to Bag</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 3 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2133-green--_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 9">
+                <div class="tag">Shawls</div>
+                <div class="description">Bird Fantasy Shawl <br>
+                  Shawls <br>
+                  PKR 95,000</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Bird Fantasy Shawl ', 95,000)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2126_d.rust_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 10">
+                <div class="tag">Shawls</div>
+                <div class="description">PERSIAN RUG-02<br>
+                 Shawls  <br>
+                 PKR 30,800</div>
+                 <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('PERSIAN RUG-02', 30,800)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4230-mahoon--1_tzmmxgnwdkgbr6lx.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 11">
+                <div class="tag">Shawls</div>
+                <div class="description">ZARAAR-SHAWL <br>
+                Shawls <br>
+                PKR 75,500 </div>
+            
+            <div class="text-center mt-2">
+                <button class="btn btn-primary" onclick="addToBag('ZARAAR-SHAWL', 75,500)">Add to Bag</button>
+            </div>
+        </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2200_beige_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 12">
+                <div class="tag">Shawls</div>
+                <div class="description">Jammu And Kashmir-Shawl<br>
+                  Shawls <br>
+                  PKR 10,400</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Jammu And Kashmir-Shawl', 10,400)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Row 4 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4308sh-n.blue-_3_.jpg%3Fwidth%3D640"class="img-fluid" alt="Image 13">
+                <div class="tag">Shawls</div>
+                <div class="description">ROYAL GLAM-Shawl <br>
+                Shawls <br>
+                PKR 68,000  </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('ROYAL GLAM-Shawl', 68,000)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4218-beige--3_90wdh99zvuorhrb5.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 14">
+                <div class="tag">Shawls</div>
+                <div class="description">LAMHAA RANGE-SHAWL<br>
+                  Shawls <br>
+                  PKR 24,000 </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('LAMHAA RANGE-SHAWL', 24,000)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4293_mahoon_4__1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 15">
+                <div class="tag">Shawls</div>
+                <div class="description">FLORAL GLAMOUR 02-Shawl <br>
+                  Shawls<br>
+                  PKR 18,900</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('FLORAL GLAMOUR 02-Shawl ', 18,900)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1231_yellow_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 16">
+                <div class="tag">Shawls</div>
+                <div class="description">FLORA FUNK<br>
+                   Shawls<br>
+                   PKR 24,000</div>
+                   <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('FLORA FUNK', 24,000)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <button class="btn btn-primary" onclick="goToHome()">Go to Home Page</button>
+    </div>
+     
+    <script>
+      function goToHome() {
+        window.location.href = 'website.html'; // Redirects to home page
+      }
+      function addToBag(itemName, itemPrice) {
+            alert(`${itemName} (PKR ${itemPrice}) has been added to your bag.`);
+            // Add your shopping cart functionality here
+        }
+    </script>
+    <script src="menu.js" defer></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

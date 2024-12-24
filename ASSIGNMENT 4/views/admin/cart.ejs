@@ -1,0 +1,106 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card {
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <% if (cart.length> 0) { %>
+                <h2 class="text-center mb-4">Your Shopping Cart</h2>
+                <table class="table table-bordered table-hover align-middle text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% cart.forEach((item) => { %>
+                            <tr>
+                                <td>
+                                    <img src="/<%= item.product.picture %>" alt="Product Image" class="img-thumbnail"
+                                        style="width: 80px; height: auto;">
+                                </td>
+                                <td>
+                                    <%= item.product.name %>
+                                </td>
+                                <td>Rs <%= item.product.price.toFixed(2) %>
+                                </td>
+                                <td><%= item.product.description  %></td>
+                                <td>
+                                    <div class="input-group justify-content-center">
+                                        <!-- Decrease Button -->
+                                        <form action="/cart/update" method="POST" class="d-inline">
+                                            <input type="hidden" name="productId" value="<%= item.product._id %>">
+                                            <input type="hidden" name="action" value="decrease">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary">-</button>
+                                        </form>
+                    
+                                        <!-- Quantity Display -->
+                                        <span class="badge bg-secondary fs-6 mx-2">
+                                            <%= item.quantity %>
+                                        </span>
+                    
+                                        <!-- Increase Button -->
+                                        <form action="/cart/update" method="POST" class="d-inline">
+                                            <input type="hidden" name="productId" value="<%= item.product._id %>">
+                                            <input type="hidden" name="action" value="increase">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </form>
+                                    </div>
+                                </td>
+                                <td class="fw-bold">Rs <%= (item.product.price * item.quantity).toFixed(2) %>
+                                </td>
+                                <td>
+                                    <form action="/cart/delete" method="POST" style="display: inline;">
+                                        <input type="hidden" name="productId" value="<%= item.product._id %>">
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                    
+                </table>
+
+                <div class="row">
+                    <!-- Subtotal and Checkout Section -->
+                    <div class="col-md-6">
+                        <div class="card p-3 shadow">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="fw-bold fs-5">Subtotal:</span>
+                                <span class="fs-5">Rs <%= totalPrice.toFixed(2) %></span>
+                            </div>
+                            <hr>
+                            <form action="/cart/checkout" method="POST">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Proceed to Checkout</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% } else { %>
+                    <div class="text-center">
+                        <h3 class="text-muted">Your cart is empty.</h3>
+                        <a href="/home" class="btn btn-outline-secondary mt-4">Continue Shopping</a>
+                    </div>
+                    <% } %>
+        </div>
+    </div>
+</div>

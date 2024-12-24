@@ -1,0 +1,43 @@
+<head>
+    <title>Create Product</title>
+    <link rel="stylesheet" href="/css/product-form.css">
+  </head>
+  <body>
+  <div class="form-container">
+    <a id="cancelButton" class="cancel-cross" href="/products">×</a>
+    <h1>Create Product</h1>
+    <form id="productForm" action="/products/create" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Product Name:</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" rows="4"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="file">Picture Upload:</label>
+        <input name="file" type="file">
+      </div>
+  
+      <div class="button-container">
+        <button type="submit">Add Product</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById('cancelButton').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.getElementById('productForm').reset();
+      window.location.href = '/products';
+    });
+  
+  </script>
+  </body>

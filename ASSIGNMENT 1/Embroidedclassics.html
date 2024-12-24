@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Page 1 next part</title>
+    <style>
+        html, body {
+         overflow-x: hidden;
+        }
+         body {
+         margin: 0;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            overflow: hidden; 
+        }
+        .image-container:hover .img-fluid {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .img-fluid {
+            transition: transform 0.3s ease-in-out;
+        }
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 2;
+            color: black;
+        }
+        .description {
+            margin-top: 10px;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            color: black;
+        }
+        .text-center {
+            font-style: italic;
+            font-weight: bold;
+        }
+        .image-container:hover .tag,
+        .image-container:hover .description {
+            z-index: 3;
+        }
+        .btn {
+            font-size: 14px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">EMBROIDED CLASSICS</h1>
+        
+        <!-- Loop through rows of images -->
+        <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1100-musterad-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 1">
+                <div class="tag">Shawls</div>
+                <div class="description">MC1100 SHAWL MUSTARD  <br>
+                  New in <br>
+                  PKR 28,000</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('MC1100 SHAWL MUSTARD', 28000)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4555-grey-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 2">
+                <div class="tag">Casuals</div>
+                <div class="description">CH4555 L-GRAY <br>
+                  New in <br>
+                  PKR 36,900</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('CH4555 L-GRAY', 36,900)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4557-red-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 3">
+                <div class="tag">Casuals</div>
+                <div class="description">CH4557 KARANDI Lawn Red<br>
+                    New in <br>
+                    PKR 23,900</div>
+                    <div class="text-center mt-2">
+                        <button class="btn btn-primary" onclick="addToBag('ch4557 KARANDI Lawn Red', 23,900)">Add to Bag</button>
+                    </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4688-lgreen-4.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 4">
+                <div class="tag">Casuals</div>
+                <div class="description">SAMAH RANGE<br>
+                    New in <br>
+                    PKR 16,650</div>
+    
+            <div class="text-center mt-2">
+                <button class="btn btn-primary" onclick="addToBag('SAMAH Range', 16,650)">Add to Bag</button>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <!-- Row 2 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1286-purple-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 5">
+                <div class="tag">Casuals</div>
+                <div class="description">MC1286 Cambric Purple<br>
+                  New in <br>
+                  PKR 13,575</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('MC1286 Cambric Purple',13,575)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1280-s-blue-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 6">
+                <div class="tag">Casuals</div>
+                <div class="description">MC1280 Cambric S-BLUE <br>
+                  New in <br>
+                  PKR 13,550 </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('MC1280 Cambric S-BLUE', 13,550)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1275-beige-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 7">
+                <div class="tag">Casuals</div>
+                <div class="description"> MC1275 Cambric Beige<br>
+                  New in <br>
+                  PKR 13,625
+                </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('MC1275 Cambric Beige', 13,625)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1232-green-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 8">
+                <div class="tag">Casuals</div>
+                <div class="description">MC1232 Karandi Lawn Mint-Grn<br>
+                  New in <br>
+                  PKR 14,100</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('MC1232 Karandi Lawn Mint-Grn', 14,100)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 3 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2091-tblue-1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 9">
+                <div class="tag">Casuals</div>
+                <div class="description">BNL2091 Blue Karandi Lawn <br>
+                  New in <br>
+                  PKR 7,320</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('BNL2091 Blue Karandi Lawn', 7,320)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4685-black-5.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 10">
+                <div class="tag">Casuals</div>
+                <div class="description">CH4685 Karandi Lawn Black <br>
+                 New in  <br>
+                 PKR 14050 </div>
+                 <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('CH4685 Karandi Lawn Black', 14050)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2546_l.pink_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 11">
+                <div class="tag">Casuals</div>
+                <div class="description">Ellegence Cros-Stitch 002 <br>
+                New in <br>
+                PKR 14,325</div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Ellegence Cros-Stitch 002', 14,325)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4530_s.blue_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 12">
+                <div class="tag">Casuals</div>
+                <div class="description">Mughal Harmony 001<br>
+                  New in <br>
+                  PKR 11,525</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Mughal Harmony 001', 11,525)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Row 4 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1226_maroon_1_.jpg%3Fwidth%3D640"class="img-fluid" alt="Image 13">
+                <div class="tag">Casuals</div>
+                <div class="description">Hibiscus Range <br>
+                New in <br>
+                PKR 11,825   </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Hibiscus Range', 11,825)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1230_yellow_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 14">
+                <div class="tag">Casuals</div>
+                <div class="description">Sacred Lotus <br>
+                  New in <br>
+                  PKR 12,275 </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Sacred Lotus', 12,275)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/mc1233_purple_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 15">
+                <div class="tag">Casuals</div>
+                <div class="description">Foret Tropical <br>
+                  New in<br>
+                  PKR 12,425 </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Foret Tropical ', 12,425)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/bnl2550_sea_green_1_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 16">
+                <div class="tag">Casuals</div>
+                <div class="description">Blossomy Range<br>
+                   New in <br>
+                   PKR 13,475</div>
+                   <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('Blossomy Range', 13,475)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="text-center mt-5">
+        <button class="btn btn-primary" onclick="goToHome()">Go to Home Page</button>
+    </div>
+
+    <script>
+      function goToHome() {
+        window.location.href = 'website.html'; // Redirects to home page
+      }
+      function addToBag(itemName, itemPrice) {
+            alert(`${itemName} (PKR ${itemPrice}) has been added to your bag.`);
+           
+        }
+    </script>
+    <script src="menu.js" defer></script>
+   
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

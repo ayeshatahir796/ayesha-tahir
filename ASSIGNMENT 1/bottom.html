@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bottom</title>
+    <style>
+        html, body {
+        overflow-x: hidden;
+       }
+       body {
+        margin: 0;
+     }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            overflow:hidden; 
+        }
+        .image-container:hover .img-fluid{
+            transform: scale(1.1);
+            transform: transition 0.3s ease-in-out;
+        }
+        .img-fluid{
+            transform:transition 0.3s ease-in-out;
+        }
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index:2;
+        }
+        .description {
+            margin-top: 10px; /* Space between image and description */
+            text-align: center; /* Center text */
+            z-index:2;
+            position:relative;
+        }
+        .text-center{
+            font-style: italic;
+            font-weight: bold;
+        }
+        .image-container:hover .tag,
+        .image-container:hover .description {
+            z-index:3;
+        }
+        .btn {
+            font-size: 14px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: black;
+            color:white;
+        }
+        .cart-container {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">BOTTOMS</h1>
+        
+        <!-- Loop through rows of images -->
+        <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4495_beige_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 1">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI<br>
+                 Bottom<br>
+                PKR 2,798</div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI', 2,798)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4096-beige--2_dflmndecgoo7j0iy.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 2">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI <br>
+                  Bottom<br>
+                  PKR 2,693</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI', 2,693)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4095_black_2__1.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 3">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI  <br>
+                  Bottom <br>
+                  PKR 2,798</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI',2,798 )">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4131-white--2_djgathl44ybw5wdz.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 4">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI<br>
+                    Bottom<br>
+                    PKR 2,850
+                    </div>
+                    <div class="text-center mt-2">
+                        <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI', 2,850)">Add to Bag</button>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 2 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/pr1513-white.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 5">
+                <div class="tag">Prints</div>
+                <div class="description">CAPRI<br>
+                  Bottom<br>
+                  PKR 1,932</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('CAPRI',1,932)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/pr1514_beige_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 6">
+                <div class="tag">Prints</div>
+                <div class="description">CAPRI <br>
+                  Bottom<br>
+                  PKR 1,932</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('CAPRI ', 1,932)">Add to Bag</button>
+                </div>
+            </div>
+    
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/wr515-beige--2_9jr9lcsouhcpls5v.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 7">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI<br>
+                  Embroides Classics <br>
+                  PKR 2,243
+                </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI  Embroides Classics', 2,243)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/pr1296-beige--2_bt7pwtysvuxnpmlo.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 8">
+                <div class="tag">Prints</div>
+                <div class="description">CAPRI<br>
+                  Premium Prints <br>
+                  PKR 1,750</div>
+            
+            <div class="text-center mt-2">
+                <button class="btn btn-primary" onclick="addToBag('CAPRI  Premium Prints', 1,750)">Add to Bag</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 3 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4131_black_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 9">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI <br>
+                  Embroided Classics<br>
+                  PKR 2,870</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI Embroided Classics', 2,870)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/wr516_beige_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 10">
+                <div class="tag">Casuals</div>
+                <div class="description">CAPRI WR-516<br>
+                 Bottoms <br>
+                 PKR 4,388</div>
+                 <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('CAPRI WR-516 Bottoms', 4,388)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch4131_white_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 11">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI <br>
+                Embroided Classics <br>
+                PKR 2,870 </div>
+            
+            <div class="text-center mt-2">
+                <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI Embroided Classics', 2,870)">Add to Bag</button>
+            </div>
+        </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/pr1298-white--2_2pmjxah7gbzxfk9p.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 12">
+                <div class="tag">Casuals</div>
+                <div class="description">PRINTED<br>
+                  Bottoms <br>
+                  PKR 1,558</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('PRINTED  Bottoms ', 1,558)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Row 4 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/pr1299-beige--2_5fewokufd0yrplbt.jpg%3Fwidth%3D640"class="img-fluid" alt="Image 13">
+                <div class="tag">Prints</div>
+                <div class="description">CAPRI <br>
+                Bottoms <br>
+                PKR 2,233 </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('CAPRI Bottoms', 2,233)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/wr518-white--2_g7bcr4kt4c1j14hv.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 14">
+                <div class="tag">Casuals</div>
+                <div class="description">STITCHED CAPRI<br>
+                 Embroided Classics <br>
+                  PKR 2,243</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI Embroided Classics ', 2,243)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/ch3873-beige--2_otgoe0varhlikawe.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 15">
+                <div class="tag">Casuals</div>
+                <div class="description">CAPRI<br>
+                  Embroided Classics<br>
+                  PKR 2,393</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('CAPRI Embroided Classics ', 2,393)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/pr1297-white--2_l6ze9rogqi4l39dk.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 16">
+                <div class="tag">Prints</div>
+                <div class="description">STITCHED CAPRI<br>
+                   Bottoms<br>
+                   PKR 2,233</div>
+                   <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('STITCHED CAPRI   Bottoms', 2,233)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <button class="btn btn-primary" onclick="goToHome()">Go to Home Page</button>
+    </div>
+     
+    <script>
+      function goToHome() {
+        window.location.href = 'website.html'; // Redirects to home page
+      }
+      function addToBag(itemName, itemPrice) {
+            alert(`${itemName} (PKR ${itemPrice}) has been added to your bag.`);
+            
+        }
+    </script>
+    <script src="menu.js" defer></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

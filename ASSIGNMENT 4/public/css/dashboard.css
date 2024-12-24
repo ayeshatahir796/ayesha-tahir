@@ -1,0 +1,40 @@
+.top-right-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    /* Spacing between links */
+    position: absolute;
+    /* Positioning the navigation in the top right */
+    top: 10px;
+    /* Distance from the top of the page */
+    right: 20px;
+    /* Distance from the right of the page */
+    font-size: 1rem;
+}
+
+/* Link Styles */
+.top-right-nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    /* Font size for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Gap between icon and text */
+}
+
+/* Hover Effect */
+.top-right-nav li a:hover {
+    color: #007bff;
+}
+
+/* Icon Styles */
+.top-right-nav li i {
+    font-size: 1.2rem;
+    /* Icon size */
+}

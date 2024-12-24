@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>BAREEZE MAN</title>
+    <style>
+        html, body {
+        overflow-x: hidden;
+       }
+       body {
+        margin: 0;
+     }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            overflow:hidden; 
+        }
+        .image-container:hover .img-fluid{
+            transform: scale(1.1);
+            transform: transition 0.3s ease-in-out;
+        }
+        .img-fluid{
+            transform:transition 0.3s ease-in-out;
+        }
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index:2;
+        }
+        .description {
+            margin-top: 10px; /* Space between image and description */
+            text-align: center; /* Center text */
+            z-index:2;
+            position:relative;
+        }
+        .text-center{
+            font-style: italic;
+            font-weight: bold;
+        }
+        .image-container:hover .tag,
+        .image-container:hover .description {
+            z-index:3;
+        }
+        .btn {
+            font-size: 14px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: black;
+            color:white;
+        }
+        .cart-container {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">BAREEZE MAN</h1>
+        
+        <!-- Loop through rows of images -->
+        <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000178101-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 1">
+                <div class="tag">Man</div>
+                <div class="description">PREMIUM 365 LATHA-LATTE<br>
+                 Bareeze Man<br>
+                PKR 6,450</div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('PREMIUM 365 LATHA LATTE', 6,450)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000184772-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 2">
+                <div class="tag">Man</div>
+                <div class="description">PREMIUM 365 LATHA-WHITE<br>
+                Bareeze Man<br>
+                  PKR 6,450</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('PREMIUM 365 LATHA WHITE', 6,450)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000171554-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 3">
+                <div class="tag">Man</div>
+                <div class="description">PREMIUM 365 LATHA-PINK  <br>
+                  Bareeze Man <br>
+                  PKR 6,450</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('PREMIUM 365 LATHA-PINK',6,450 )">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000183708-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 4">
+                <div class="tag">Man</div>
+                <div class="description">PREMIUM 365 LATHA-BLACK<br>
+                    Bareeze Man<br>
+                    PKR 6,450
+                    </div>
+                    <div class="text-center mt-2">
+                        <button class="btn btn-primary" onclick="addToBag('PREMIUM 365 LATHA-BLACK', 6,450)">Add to Bag</button>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 2 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000171559-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 5">
+                <div class="tag">Man</div>
+                <div class="description">PREMIUM 365 LATHA-PALE-GREEN<br>
+                 Bareeze Man <br>
+                  PKR 6,450 </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('PREMIUM 365 LATHA-PALE-GREEN',6,450)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000184776-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 6">
+                <div class="tag">Man</div>
+                <div class="description">SPUN SILVER-EGYPTIAN-IVORY<br>
+                  Bareeze Man<br>
+                  PKR 11,500</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('SPUN SILVER-EGYPTIAN-IVORY', 11,500)">Add to Bag</button>
+                </div>
+            </div>
+    
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000171556-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 7">
+                <div class="tag">Man</div>
+                <div class="description">PREMIUM 365 LATHA-DEEP-MAH<br>
+                  Bareeze Man <br>
+                  PKR  6,450
+                </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('PREMIUM 365 LATHA-DEEP-MAH', 6,450)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000184778-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 8">
+                <div class="tag">Man</div>
+                <div class="description">COTTON DOBBY-L-PEACH<br>
+                  Bareeze Man <br>
+                  PKR 10,950</div>
+            
+            <div class="text-center mt-2">
+                <button class="btn btn-primary" onclick="addToBag('COTTON DOBBY-L-PEACH', 10,950)">Add to Bag</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Row 3 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000184779-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 9">
+                <div class="tag">Man</div>
+                <div class="description">COTTON DOBBY-L-GREY <br>
+                 Bareeze Man<br>
+                  PKR 10,950</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('COTTON DOBBY-L-GREY', 10.950)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000184770-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 10">
+                <div class="tag">Man</div>
+                <div class="description">SLUB-KHADDAR BEIGE<br>
+                 Bareeze Man <br>
+                 PKR 8,950</div>
+                 <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('SLUB-KHADDAR BEIGE', 8,950)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000184766-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 11">
+                <div class="tag">Man</div>
+                <div class="description">SPUN-GOLD-EGYPTIAN-GREEN <br>
+                Bareeze Man <br>
+                PKR 13,500 </div>
+            
+            <div class="text-center mt-2">
+                <button class="btn btn-primary" onclick="addToBag('SPUN-GOLD-EGYPTIAN-GREEN ', 13,500)">Add to Bag</button>
+            </div>
+        </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000184777-2.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 12">
+                <div class="tag">Man</div>
+                <div class="description">COTTON DOBBY-SKY-BLUE<br>
+                  Bareeze Man <br>
+                  PKR 10,950</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('OTTON DOBBY-SKY-BLUE ', 10,950)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Row 4 -->
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000127210_2_.jpg%3Fwidth%3D640"class="img-fluid" alt="Image 13">
+                <div class="tag">Man</div>
+                <div class="description">JACQUARD-MEHROON<br>
+                Bareeze Man <br>
+                PKR 11,950 </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('JACQUARD-MEHROON', 11,950)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000127208_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 14">
+                <div class="tag">Man</div>
+                <div class="description">JACQUARD-BLACK<br>
+                 Bareeze Man <br>
+                  PKR 11,950</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('JACQUARD BLACK', 11,950)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000127211_3_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 15">
+                <div class="tag">Man</div>
+                <div class="description">JACQUARD-BLUE<br>
+                  Bareeze Man<br>
+                  PKR 11,950</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('JACQUARD-BLUE ', 11,950)">Add to Bag</button>
+                </div>
+            </div>
+            <div class="col-md-3 image-container">
+                <img src="https://cdn.comverseglobal.com/bareeze/products/product_images/2000000127202_2_.jpg%3Fwidth%3D640" class="img-fluid" alt="Image 16">
+                <div class="tag">Man</div>
+                <div class="description">SPECIAL COTTON<br>
+                   Bareeze Man<br>
+                   PKR 9,950</div>
+                   <div class="text-center mt-2">
+                    <button class="btn btn-primary" onclick="addToBag('SPECIAL COTTON', 9,950)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <button class="btn btn-primary" onclick="goToHome()">Go to Home Page</button>
+    </div>
+     
+    <script>
+      function goToHome() {
+        window.location.href = 'website.html'; // Redirects to home page
+      }
+      function addToBag(itemName, itemPrice) {
+            alert(`${itemName} (PKR ${itemPrice}) has been added to your bag.`);
+            
+        }
+    </script>
+    <script src="menu.js" defer></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
